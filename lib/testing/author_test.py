@@ -16,6 +16,7 @@ class TestAuthor:
         Article(author_1, magazine, "How to wear a tutu with style")
         Article(author_2, magazine, "Dating life in NYC")
 
+
         assert author_1.name == "Carry Bradshaw"
         assert author_2.name == "Nathaniel Hawthorne"
 
