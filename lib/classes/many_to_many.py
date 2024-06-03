@@ -6,7 +6,6 @@ class Article:
         self.magazine = magazine
         self.title = title
         Article.all.append(self)
-
     @property
     def title(self):
         return self._title
@@ -67,15 +66,11 @@ class Author:
                 TypeError("Name must be a string")
 
     def articles(self):
-        pass
         return [article for article in Article.all if self == article.author]
-
     def magazines(self):
         return list({article.magazine for article in self.articles()})
-
     def add_article(self, magazine, title):
         return Article(self, magazine, title)
-
     def topic_areas(self):
         topic_areas = list({magazine.category for magazine in self.magazines()})
         if topic_areas:
